@@ -55,6 +55,6 @@
     "webpack-cli": "^4.8.0"
   },
   "dependencies": {
-    "@esotericsoftware/spine-webgl": "^4.2.3"
+    "@esotericsoftware/spine-webgl": "^4.2.4"
   }
 }
