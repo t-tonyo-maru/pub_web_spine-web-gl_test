@@ -20,7 +20,7 @@ class App implements spine.SpineCanvasApp {
 
   loadAssets(canvas: spine.SpineCanvas) {
     // canvas.assetManager.AnimationState
-    canvas.assetManager.loadTextureAtlas('mix-and-match-pma.atlas')
+    canvas.assetManager.loadTextureAtlas('mix-and-match-pro.atlas')
     canvas.assetManager.loadBinary('mix-and-match-pro.skel')
   }
 
@@ -28,7 +28,7 @@ class App implements spine.SpineCanvasApp {
     const assetManager = canvas.assetManager
 
     // Create the atlas
-    const atlas = canvas.assetManager.require('mix-and-match-pma.atlas')
+    const atlas = canvas.assetManager.require('mix-and-match-pro.atlas')
     const atlasLoader = new spine.AtlasAttachmentLoader(atlas)
 
     // Create the skeleton
