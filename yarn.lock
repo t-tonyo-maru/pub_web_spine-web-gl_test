@@ -325,17 +325,17 @@
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.3.tgz#90420f9f9c6d3987f176a19a7d8e764271a2f55d"
   integrity sha512-Fxt+AfXgjMoin2maPIYzFZnQjAXjAL0PHscM5pRTtatFqB+vZxAM9tLp2Optnuw3QOQC40jTNeGYFOMvyf7v9g==
 
-"@esotericsoftware/spine-core@^4.2.3":
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/@esotericsoftware/spine-core/-/spine-core-4.2.3.tgz#b51cecfdc8d3bf7e5411db2b0e3695cba52176cc"
-  integrity sha512-Gbd7B08NzRiJoQbhha3lFVSx1sTI4cONwn3RBoBYdcex8yxyn2kp2+Fu5ng/Y0jyqLEvYuRUBFrLFfWuTy4fwA==
+"@esotericsoftware/spine-core@^4.2.4":
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/@esotericsoftware/spine-core/-/spine-core-4.2.4.tgz#a38744c9973f6668b86e7dc80e558b25d6611be3"
+  integrity sha512-tOgG+HFVuy0Ey91fj1jWEqNaKRVkSc3sZEMw8xfREN8eKsq7IRDxmG4e+o5ENGlEvQaGYh+JQBu3KqzMfWLFTw==
 
-"@esotericsoftware/spine-webgl@^4.2.3":
-  version "4.2.3"
-  resolved "https://registry.yarnpkg.com/@esotericsoftware/spine-webgl/-/spine-webgl-4.2.3.tgz#66151221f07d1e0492ee0a4e88cbe239b6a937ab"
-  integrity sha512-mkCz0v9vDyXy0pO0m6HxpGj3x/jWQ1yo7kU4fAn+y5DYY/EtsHWLVI6e3djd3gSj26n/AKAYAvJ2tcIsl+S+0Q==
+"@esotericsoftware/spine-webgl@^4.2.4":
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/@esotericsoftware/spine-webgl/-/spine-webgl-4.2.4.tgz#d94fda7a3af5125ccd9a0749a6fd792c591ff632"
+  integrity sha512-S5LuepPbW4YIoNCMfLtPULBV5mUtgHH7Iiy8ciyLGxlfR5ZAXherzUWSkTT8PvzTEfSMXUk0/4pG73YR/CdLRg==
   dependencies:
-    "@esotericsoftware/spine-core" "^4.2.3"
+    "@esotericsoftware/spine-core" "^4.2.4"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
