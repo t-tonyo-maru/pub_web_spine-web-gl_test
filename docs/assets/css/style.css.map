@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/scss/style.scss","style.css"],"names":[],"mappings":"AAEA;EACE,UAAA;EACA,SAAA;ACDF","file":"style.css","sourcesContent":["@charset \"UTF-8\";\n\n* {\n  padding: 0;\n  margin: 0;\n}\n","* {\n  padding: 0;\n  margin: 0;\n}\n\n/*# sourceMappingURL=style.css.map */\n"]}
