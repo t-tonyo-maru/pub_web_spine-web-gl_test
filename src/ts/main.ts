@@ -2,6 +2,8 @@ import * as spine from '@esotericsoftware/spine-webgl'
 
 window.onload = () => {
   const canvas = document.getElementById('canvas') as HTMLCanvasElement
+  canvas.width = window.innerWidth
+  canvas.height = window.innerHeight
 
   new spine.SpineCanvas(canvas, {
     pathPrefix: 'assets/spine-data/',
@@ -20,7 +22,7 @@ class App implements spine.SpineCanvasApp {
 
   loadAssets(canvas: spine.SpineCanvas) {
     // canvas.assetManager.AnimationState
-    canvas.assetManager.loadTextureAtlas('mix-and-match-pma.atlas')
+    canvas.assetManager.loadTextureAtlas('mix-and-match-pro.atlas')
     canvas.assetManager.loadBinary('mix-and-match-pro.skel')
   }
 
@@ -28,14 +30,14 @@ class App implements spine.SpineCanvasApp {
     const assetManager = canvas.assetManager
 
     // Create the atlas
-    const atlas = canvas.assetManager.require('mix-and-match-pma.atlas')
+    const atlas = canvas.assetManager.require('mix-and-match-pro.atlas')
     const atlasLoader = new spine.AtlasAttachmentLoader(atlas)
 
     // Create the skeleton
     const skeletonBinary = new spine.SkeletonBinary(atlasLoader)
     skeletonBinary.scale = 0.5
 
-    let resultskeletonData:spine.SkeletonData
+    let resultskeletonData: spine.SkeletonData
     try {
       resultskeletonData = skeletonBinary.readSkeletonData(
         assetManager.require('mix-and-match-pro.skel')
@@ -45,6 +47,8 @@ class App implements spine.SpineCanvasApp {
     }
 
     this.skeleton = new spine.Skeleton(resultskeletonData!)
+    this.skeleton.x = 0
+    this.skeleton.y = 0
 
     // Create the animation state
     const stateData = new spine.AnimationStateData(resultskeletonData!)
@@ -56,15 +60,33 @@ class App implements spine.SpineCanvasApp {
     // skins. Using the skin API, a new skin is created which is
     // a combination of all these individual item skins.
     const mixAndMatchSkin = new spine.Skin('custom-girl')
-    mixAndMatchSkin.addSkin(resultskeletonData!.findSkin('skin-base') as spine.Skin)
-    mixAndMatchSkin.addSkin(resultskeletonData!.findSkin('nose/short') as spine.Skin)
-    mixAndMatchSkin.addSkin(resultskeletonData!.findSkin('eyelids/girly') as spine.Skin)
-    mixAndMatchSkin.addSkin(resultskeletonData!.findSkin('eyes/violet') as spine.Skin)
-    mixAndMatchSkin.addSkin(resultskeletonData!.findSkin('hair/brown') as spine.Skin)
-    mixAndMatchSkin.addSkin(resultskeletonData!.findSkin('clothes/hoodie-orange') as spine.Skin)
-    mixAndMatchSkin.addSkin(resultskeletonData!.findSkin('legs/pants-jeans') as spine.Skin)
-    mixAndMatchSkin.addSkin(resultskeletonData!.findSkin('accessories/bag') as spine.Skin)
-    mixAndMatchSkin.addSkin(resultskeletonData!.findSkin('accessories/hat-red-yellow') as spine.Skin)
+    mixAndMatchSkin.addSkin(
+      resultskeletonData!.findSkin('skin-base') as spine.Skin
+    )
+    mixAndMatchSkin.addSkin(
+      resultskeletonData!.findSkin('nose/short') as spine.Skin
+    )
+    mixAndMatchSkin.addSkin(
+      resultskeletonData!.findSkin('eyelids/girly') as spine.Skin
+    )
+    mixAndMatchSkin.addSkin(
+      resultskeletonData!.findSkin('eyes/violet') as spine.Skin
+    )
+    mixAndMatchSkin.addSkin(
+      resultskeletonData!.findSkin('hair/brown') as spine.Skin
+    )
+    mixAndMatchSkin.addSkin(
+      resultskeletonData!.findSkin('clothes/hoodie-orange') as spine.Skin
+    )
+    mixAndMatchSkin.addSkin(
+      resultskeletonData!.findSkin('legs/pants-jeans') as spine.Skin
+    )
+    mixAndMatchSkin.addSkin(
+      resultskeletonData!.findSkin('accessories/bag') as spine.Skin
+    )
+    mixAndMatchSkin.addSkin(
+      resultskeletonData!.findSkin('accessories/hat-red-yellow') as spine.Skin
+    )
     this.skeleton.setSkin(mixAndMatchSkin)
   }
 
