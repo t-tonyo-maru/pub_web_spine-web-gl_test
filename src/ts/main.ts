@@ -48,7 +48,7 @@ class App implements spine.SpineCanvasApp {
 
     this.skeleton = new spine.Skeleton(resultskeletonData!)
     this.skeleton.x = 0
-    this.skeleton.y = 0
+    this.skeleton.y = window.innerHeight / 5 * -1
 
     // Create the animation state
     const stateData = new spine.AnimationStateData(resultskeletonData!)
@@ -98,7 +98,7 @@ class App implements spine.SpineCanvasApp {
 
   render(canvas: spine.SpineCanvas) {
     const renderer = canvas.renderer
-    renderer.resize(spine.ResizeMode.Expand)
+    // renderer.resize(spine.ResizeMode.Expand)
     canvas.clear(0.2, 0.2, 0.2, 1)
     renderer.begin()
     renderer.drawSkeleton(this.skeleton!, true)
